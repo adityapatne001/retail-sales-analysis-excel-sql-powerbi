@@ -11,7 +11,7 @@ CREATE TABLE customers(
 );
 
 COPY customers(customer_id, customer_name, segment, country, city, state, postal_code, region)
-FROM 'D:\DO_NOT_ENTER\Data analysis excel+sql+power bi\SQL Phase\customers_cleaned.csv'
+FROM 'D:\DO_NOT_ENTER\Data analysis excel+sql+power bi\SQL Phase\customers.csv'
 DELIMITER ','
 CSV HEADER
 ENCODING 'LATIN1';
@@ -27,7 +27,7 @@ CREATE TABLE products(
 );
 
 COPY products(product_id, category,	sub_category, product_name)
-FROM 'D:\DO_NOT_ENTER\Data analysis excel+sql+power bi\SQL Phase\products_cleaned.csv'
+FROM 'D:\DO_NOT_ENTER\Data analysis excel+sql+power bi\SQL Phase\products.csv'
 DELIMITER ','
 CSV HEADER
 ENCODING 'LATIN1';
@@ -66,7 +66,7 @@ CREATE TABLE order_details(
 );
 
 COPY order_details(order_id, product_id, sales, quantity, discount, profit)
-FROM 'D:\DO_NOT_ENTER\Data analysis excel+sql+power bi\SQL Phase\order_details_cleaned.csv'
+FROM 'D:\DO_NOT_ENTER\Data analysis excel+sql+power bi\SQL Phase\order_details.csv'
 DELIMITER ','
 CSV HEADER
 ENCODING 'LATIN1';
