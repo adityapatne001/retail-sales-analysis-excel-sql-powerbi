@@ -57,8 +57,16 @@ Used DAX measures and created a separate Date table for time-based analysis
 📂 PowerBI
 - `superstore_dashboard.pbix` – Power BI report
 
+Main_Dashboard
+
 ![Superstore_Dashboard](./screenshots/PowerBI_Main_Dashboard.png)
+
+Customer_Drillthrough
+
 ![Customer_Drillthrough](./screenshots/Customer_Drillthrough.png)
+
+Time_Intelligence_Overview
+
 ![Time_Intelligence_Overview](./screenshots/Time_Intelligence_Overview.png)
 
 ✅ Concepts Covered
