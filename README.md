@@ -43,7 +43,7 @@ Used DAX measures and created a separate Date table for time-based analysis
 📂 Excel
 - `Superstore_Excel_Dashboard.xlsm` – Macro-enabled workbook
 
-![Excel_Dashboard](./screenshots/Excel_Dashboard.png)
+![Excel_Dashboard](./Excel/Excel_Dashboard.png)
 
 📂 SQL
 - `superstore_flat_analysis.sql` – SQL queries on flat CSV
@@ -59,15 +59,15 @@ Used DAX measures and created a separate Date table for time-based analysis
 
 Main Dashboard
 
-![Superstore_Dashboard](./screenshots/PowerBI_Main_Dashboard.png)
+![Superstore_Dashboard](./Power_BI/PowerBI_Main_Dashboard.png)
 
 Customer Drillthrough
 
-![Customer_Drillthrough](./screenshots/Customer_Drillthrough.png)
+![Customer_Drillthrough](./Power_BI/Customer_Drillthrough.png)
 
 Time Intelligence Overview
 
-![Time_Intelligence_Overview](./screenshots/Time_Intelligence_Overview.png)
+![Time_Intelligence_Overview](./Power_BI/Time_Intelligence_Overview.png)
 
 ✅ Concepts Covered
 Data Cleaning & Normalization (Power Query, Excel, SQL)
