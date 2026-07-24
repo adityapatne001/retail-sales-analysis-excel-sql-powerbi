@@ -6,24 +6,24 @@
 ---
 
 ## 🔍 Project Overview
-This is a full-stack data analysis project that covers the complete lifecycle of analytics — from raw data cleaning and modeling to advanced SQL querying and dashboard building. It demonstrates proficiency in Excel, SQL (PostgreSQL) and Power BI.
+This is a full-stack data analysis project that covers the complete lifecycle of analytics - from raw data cleaning and modeling to advanced SQL querying and dashboard building. It demonstrates proficiency in Excel, SQL (PostgreSQL), and Power BI.
 
-The dataset was normalized into relational tables, queried for business insights using SQL and visualized through interactive dashboards in both Excel and Power BI.
+The dataset was normalized into relational tables, queried for business insights using SQL, and visualized through interactive dashboards in both Excel and Power BI.
 
 ## 🧠 Key Features
 **🔹 Excel Dashboard**
 
-Created a macro-enabled dashboard with PivotTables, slicers, formulas and charts across 5 sheets
+Created a macro-enabled dashboard with PivotTables, slicers, formulas, and charts across 5 sheets
 
 Used Power Query for cleaning and transformation
 
-Included KPI Cards, Top Products, Sales by Region and Monthly Trends
+Included KPI Cards, Top Products, Sales by Region, and Monthly Trends
 
 **🔹 SQL Analysis**
 
 Normalized the flat dataset into 4 tables: customers, orders, products, order_details
 
-Wrote SQL queries using JOINs, CTEs, subqueries and window functions
+Wrote SQL queries using JOINs, CTEs, subqueries, and window functions
 
 Analyzed trends like YoY sales, negative profit products, and monthly performance
 
@@ -74,8 +74,8 @@ Data Cleaning & Normalization (Power Query, Excel, SQL)
 
 Relational Database Design & SQL Joins
 
-Aggregations, Subqueries, CTEs and Window Functions
+Aggregations, Subqueries, CTEs, and Window Functions
 
-Excel Dashboarding with Slicers, Charts and KPIs
+Excel Dashboarding with Slicers, Charts, and KPIs
 
-Power BI Data Modeling, DAX Measures and Time Intelligence
+Power BI Data Modeling, DAX Measures, and Time Intelligence
