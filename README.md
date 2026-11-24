@@ -1,12 +1,12 @@
-# 📊 Superstore Profit Observatory — Retail Sales Analytics
+# 📊 Superstore Profit Observatory - Retail Sales Analytics
 
 **Excel • PostgreSQL • Power BI • DAX • Power Query • HTML • CSS • JavaScript**
 
-An end-to-end retail analytics portfolio project that investigates **where sales translate into profit — and where they do not**.
+An end-to-end retail analytics portfolio project that investigates **where sales translate into profit - and where they do not**.
 
 Originally developed in July 2025 using Excel, SQL and Power BI, the project was substantially revised in November 2026 through a data-quality audit, corrected relational modeling, a redesigned seven-page Power BI report, a responsive interactive web dashboard, and a modernized three-dashboard Excel workbook.
 
-**Dataset:** Tableau Sample Superstore — a publicly available sample representing a fictitious U.S. retailer (2014–2017). Monetary amounts are in USD. Time-based analyses use order dates.
+**Dataset:** Tableau Sample Superstore - a publicly available sample representing a fictitious U.S. retailer (2014–2017). Monetary amounts are in USD. Time-based analyses use order dates.
 
 [Dataset source information](https://public.tableau.com/app/resources/sample-data) · [Standalone web dashboard](./Superstore-Overview.html) · [Power BI setup](./README-PowerBI.md) · [Data validation](./README-data.md)
 
@@ -64,7 +64,7 @@ See [data documentation](./README-data.md) and [date-validation notes](./date-va
 
 ## 🛠️ Project workflow
 
-### Excel — original workflow and updated edition
+### Excel - original workflow and updated edition
 
 The original July 2025 phase used Power Query, PivotTables, PivotCharts, KPI formulas and a Segment slicer, with limited VBA controlling slicer-to-PivotTable connections. The November 2026 Excel edition is a separate, self-contained `.xlsx` workbook within this same retail project, based on the corrected transactions.
 
@@ -88,7 +88,7 @@ The original July 2025 phase used Power Query, PivotTables, PivotCharts, KPI for
 
 ![Excel Customer Insights](./screenshots/11_Excel_Customer_Insights.png)
 
-### PostgreSQL — relational analysis and data validation
+### PostgreSQL - relational analysis and data validation
 
 - Flat-table and relational SQL analysis using JOINs, CTEs, aggregations, subqueries, date functions and `LAG()` for year-over-year comparison.
 - Four normalized tables: `customers`, `products`, `orders` and `order_details`.
@@ -98,7 +98,7 @@ The original July 2025 phase used Power Query, PivotTables, PivotCharts, KPI for
 - Updated [relational analysis](./SQL/superstore_relational_analysis.sql) queries the existing corrected four-table model using schema-qualified joins. Both scripts leave persistent database tables unchanged.
 - [SQL execution instructions](./README-SQL.md).
 
-### Power BI — seven-page executive report
+### Power BI - seven-page executive report
 
 - Interactive year, destination region and product category slicers.
 - Consistent page navigation, coordinated dark-theme styling and signed profit/loss colors.
@@ -150,7 +150,7 @@ Year-to-date and month-to-date sales, prior-year comparisons, annual growth, cum
 
 ![Growth and Time](./screenshots/07_Growth_and_Time.png)
 
-## 🌐 Aurora — interactive web dashboard
+## 🌐 Aurora - interactive web dashboard
 
 A responsive, standalone executive dashboard created as an extension of the Power BI project for the Handshake *Turn Data into an Interactive Dashboard* learning mission.
 
