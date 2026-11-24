@@ -70,7 +70,7 @@ See [data documentation](./README-data.md) and [date-validation notes](./date-va
 
 The Excel workbook and original SQL analyses document the earlier implementation. The corrected November 2026 dataset and Power BI model are the authoritative versions for the revised figures.
 
-![Original Excel dashboard](./Excel/Excel_Dashboard.png)
+![Original Excel dashboard](./Excel/Excel-Dashboard.png)
 
 ### PostgreSQL - relational analysis and data validation
 
