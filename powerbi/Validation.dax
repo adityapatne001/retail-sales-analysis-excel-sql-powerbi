@@ -1,0 +1,34 @@
+// Run in Power BI Desktop DAX query view after refreshing the project.
+// Totals have full numerical precision in this query regardless of card formatting.
+EVALUATE
+UNION (
+    ROW (
+        "Slice", "All records", "Lines", [Fact Rows], "Sales", [Total_Sales], "Profit", [Total_Profit],
+        "Orders", [Total_Orders], "Customers", [Total Customers], "AOV", [Average Order Value],
+        "Source product IDs", [Product IDs sold], "Product variants", [Product variants sold]
+    ),
+    CALCULATETABLE (
+        ROW (
+            "Slice", "Technology", "Lines", [Fact Rows], "Sales", [Total_Sales], "Profit", [Total_Profit],
+            "Orders", [Total_Orders], "Customers", [Total Customers], "AOV", [Average Order Value],
+            "Source product IDs", [Product IDs sold], "Product variants", [Product variants sold]
+        ),
+        products[category] = "Technology"
+    ),
+    CALCULATETABLE (
+        ROW (
+            "Slice", "West", "Lines", [Fact Rows], "Sales", [Total_Sales], "Profit", [Total_Profit],
+            "Orders", [Total_Orders], "Customers", [Total Customers], "AOV", [Average Order Value],
+            "Source product IDs", [Product IDs sold], "Product variants", [Product variants sold]
+        ),
+        orders[region] = "West"
+    ),
+    CALCULATETABLE (
+        ROW (
+            "Slice", "December 2017", "Lines", [Fact Rows], "Sales", [Total_Sales], "Profit", [Total_Profit],
+            "Orders", [Total_Orders], "Customers", [Total Customers], "AOV", [Average Order Value],
+            "Source product IDs", [Product IDs sold], "Product variants", [Product variants sold]
+        ),
+        Date_Table[Year] = 2017, Date_Table[MonthNo] = 12
+    )
+)
