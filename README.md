@@ -230,4 +230,4 @@ Data cleaning and reconciliation • Relational modeling • SQL analysis • Ex
 
 ## 🤝 Development approach
 
-This is an independent portfolio and learning project, not production analytics for an actual retailer. The original Excel, SQL and Power BI work was extended using AI-assisted auditing, code generation, debugging and visual refinement. I reviewed the results, loaded and verified the corrected PostgreSQL schema locally, and inspected the redesigned report in Power BI Desktop.
+This is an independent portfolio and learning project, not production analytics for an actual retailer. The original Excel, SQL and Power BI work was extended using auditing, code generation, debugging and visual refinement. I reviewed the results, loaded and verified the corrected PostgreSQL schema locally, and inspected the redesigned report in Power BI Desktop.
