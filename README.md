@@ -160,8 +160,8 @@ Orders and purchasing customers are distinct counts within the selected transact
 ## 📁 Repository structure
 
 ```text
-Excel/                    Original Excel workbook and screenshot
-SQL/                      Original flat and relational SQL analysis
+Excel/                   Original Excel workbook and screenshot
+SQL/                     Original flat and relational SQL analysis
 data/                    Corrected CSVs and date reconciliation
 postgres/                PostgreSQL loader and verification scripts
 powerbi/                 Editable PBIP report and semantic model
