@@ -1,8 +1,3 @@
--- Superstore Profit Observatory | corrected relational analysis (November 2026)
--- PostgreSQL: connect to superstore_data; requires superstore_v2 from the supplied loader.
--- Works in psql or pgAdmin Query Tool. All queries are read-only; no DROP or COPY.
--- Fact: one row per line_item_id. Product dimension: product_key, not product_id.
--- Geography is stored on orders. Financial amounts are in USD.
 BEGIN TRANSACTION READ ONLY;
 
 -- 01. Executive KPIs.
