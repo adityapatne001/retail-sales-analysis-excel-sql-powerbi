@@ -1,7 +1,3 @@
--- Superstore Profit Observatory | corrected flat-file analysis (November 2026)
--- PostgreSQL / psql: run from the project root containing data/.
--- Reads corrected UTF-8 ISO-date CSV into a session-local temporary table.
--- Does not drop, overwrite or modify public or superstore_v2 tables.
 \set ON_ERROR_STOP on
 BEGIN;
 SET LOCAL DateStyle = 'ISO, YMD';
