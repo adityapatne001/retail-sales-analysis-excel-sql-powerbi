@@ -1,6 +1,3 @@
--- Run using psql from the extracted folder containing data/ and postgres/.
--- This is an atomic installation in a separate schema. Re-running compares
--- an existing installation to the delivered files without modifying its rows.
 \set ON_ERROR_STOP on
 BEGIN;
 SET LOCAL DateStyle = 'ISO, YMD';
