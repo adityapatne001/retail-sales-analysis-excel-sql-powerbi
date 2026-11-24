@@ -1,16 +1,18 @@
-# 📊 Superstore Profit Observatory - Retail Sales Analytics
+# 📊 Superstore Profit Observatory — Retail Sales Analytics
 
 **Excel • PostgreSQL • Power BI • DAX • Power Query • HTML • CSS • JavaScript**
 
-An end-to-end retail analytics portfolio project that investigates **where sales translate into profit - and where they do not**.
+An end-to-end retail analytics portfolio project that investigates **where sales translate into profit — and where they do not**.
 
-Originally developed in July 2025 using Excel, SQL and Power BI, the project was substantially revised in November 2026 through a data-quality audit, corrected relational modeling, a redesigned seven-page Power BI report, and a responsive interactive web dashboard.
+Originally developed in July 2025 using Excel, SQL and Power BI, the project was substantially revised in November 2026 through a data-quality audit, corrected relational modeling, a redesigned seven-page Power BI report, a responsive interactive web dashboard, and a modernized three-dashboard Excel workbook.
 
-**Dataset:** Tableau Sample Superstore - a publicly available sample representing a fictitious U.S. retailer (2014–2017). Monetary amounts are in USD. Time-based analyses use order dates.
+**Dataset:** Tableau Sample Superstore — a publicly available sample representing a fictitious U.S. retailer (2014–2017). Monetary amounts are in USD. Time-based analyses use order dates.
 
 [Dataset source information](https://public.tableau.com/app/resources/sample-data) · [Standalone web dashboard](./Superstore-Overview.html) · [Power BI setup](./README-PowerBI.md) · [Data validation](./README-data.md)
 
+<!-- After verifying public access in an incognito window, optionally add:
 [Open the live Aurora dashboard](https://cool-taiyaki-ddbfe5.netlify.app/)
+-->
 
 ![Power BI executive overview](./screenshots/01_Executive_Overview.png)
 
@@ -62,24 +64,41 @@ See [data documentation](./README-data.md) and [date-validation notes](./date-va
 
 ## 🛠️ Project workflow
 
-### Excel — original reporting phase
+### Excel — original workflow and updated edition
 
-- Power Query connection, PivotTables, PivotCharts, KPI formulas and a Segment slicer.
-- Macro-enabled workbook with VBA-controlled PivotTable/slicer connectivity.
-- Analysis of regional sales, category profit, products and time-based sales.
+The original July 2025 phase used Power Query, PivotTables, PivotCharts, KPI formulas and a Segment slicer, with limited VBA controlling slicer-to-PivotTable connections. The November 2026 Excel edition is a separate, self-contained `.xlsx` workbook within this same retail project, based on the corrected transactions.
 
-The Excel workbook and original SQL analyses document the earlier implementation. The corrected November 2026 dataset and Power BI model are the authoritative versions for the revised figures.
+- Three dashboard sheets: Executive Dashboard, Profitability and Customer Insights.
+- All 9,994 corrected lines embedded in the Transactions sheet.
+- Shared year dropdown, formula-linked KPIs and annual summaries, six native Excel charts, ranked tables and conditional formatting.
+- Sales trends, category and regional performance, product/discount profitability and customer segmentation.
+- Year selections use precomputed, reconciled summaries. This is not a live PostgreSQL or Power Query connection; if source data changes, regenerate the summaries.
 
-![Original Excel dashboard](./Excel/Excel-Dashboard.png)
+[Download the Excel workbook](./Excel/Superstore_Excel_Profit_Observatory.xlsx) and open it in Microsoft Excel. Select a year in Executive Dashboard and restore All years before comparing the full-dataset totals.
 
-### PostgreSQL - relational analysis and data validation
+#### Executive Dashboard
+
+![Excel Executive Dashboard](./screenshots/09_Excel_Executive_Dashboard.png)
+
+#### Profitability
+
+![Excel Profitability](./screenshots/10_Excel_Profitability.png)
+
+#### Customer Insights
+
+![Excel Customer Insights](./screenshots/11_Excel_Customer_Insights.png)
+
+### PostgreSQL — relational analysis and data validation
 
 - Flat-table and relational SQL analysis using JOINs, CTEs, aggregations, subqueries, date functions and `LAG()` for year-over-year comparison.
 - Four normalized tables: `customers`, `products`, `orders` and `order_details`.
 - Primary and foreign keys, order-line grain, destination-level geography and product-variant identity.
 - Reconciliation of row counts, monetary totals, shipping intervals and filtered populations.
+- Updated [flat-file analysis](./SQL/superstore_flat_analysis.sql) imports the corrected flat CSV into a temporary table with exact numeric precision and validates its totals before running queries.
+- Updated [relational analysis](./SQL/superstore_relational_analysis.sql) queries the existing corrected four-table model using schema-qualified joins. Both scripts leave persistent database tables unchanged.
+- [SQL execution instructions](./README-SQL.md).
 
-### Power BI - seven-page executive report
+### Power BI — seven-page executive report
 
 - Interactive year, destination region and product category slicers.
 - Consistent page navigation, coordinated dark-theme styling and signed profit/loss colors.
@@ -131,7 +150,7 @@ Year-to-date and month-to-date sales, prior-year comparisons, annual growth, cum
 
 ![Growth and Time](./screenshots/07_Growth_and_Time.png)
 
-## 🌐 Aurora - interactive web dashboard
+## 🌐 Aurora — interactive web dashboard
 
 A responsive, standalone executive dashboard created as an extension of the Power BI project for the Handshake *Turn Data into an Interactive Dashboard* learning mission.
 
@@ -147,7 +166,7 @@ To explore offline, download [Superstore-Overview.html](./Superstore-Overview.ht
 
 ## ✅ Validation and reproducibility
 
-The corrected PostgreSQL database was loaded and checked locally. The Power BI project was opened and visually inspected in Power BI Desktop. The standalone web dashboard was tested separately for filtering, chart interactions and responsive layout.
+The corrected PostgreSQL database was loaded and checked locally. The Power BI project was opened and visually inspected in Power BI Desktop. The standalone web dashboard was tested separately for filtering, chart interactions and responsive layout. The updated Excel edition was built from the corrected data; the annual summaries were reconciled against it. The revised SQL scripts were checked against the delivered schema and CSVs; local PostgreSQL execution is the final verification step.
 
 | Selection | Lines | Orders | Customers | Sales | Profit |
 |---|---:|---:|---:|---:|---:|
@@ -160,13 +179,14 @@ Orders and purchasing customers are distinct counts within the selected transact
 ## 📁 Repository structure
 
 ```text
-Excel/                   Original Excel workbook and screenshot
-SQL/                     Original flat and relational SQL analysis
+Excel/                   Updated self-contained Excel workbook
+SQL/                     Corrected flat and relational SQL analysis
 data/                    Corrected CSVs and date reconciliation
 postgres/                PostgreSQL loader and verification scripts
 powerbi/                 Editable PBIP report and semantic model
-screenshots/             Final report and web dashboard screenshots
+screenshots/             Power BI, web and Excel screenshots
 Superstore-Overview.html Standalone Aurora web dashboard
+README-SQL.md            SQL execution and validation guide
 README-data.md           Data documentation
 README-PowerBI.md        Power BI setup and validation guide
 date-validation.md       Date correction notes
@@ -177,6 +197,10 @@ date-validation.md       Date correction notes
 ### Web dashboard
 
 Download `Superstore-Overview.html` and open it in a browser. No additional setup is required.
+
+### Excel dashboard
+
+Download `Excel/Superstore_Excel_Profit_Observatory.xlsx` and open it in Microsoft Excel. Use the year dropdown on the Executive Dashboard; no database credentials or macros are required for this edition.
 
 ### PostgreSQL and Power BI
 
@@ -191,6 +215,12 @@ psql -X -h localhost -p 5432 -U postgres -d superstore_data -W -f ".\postgres\ve
 
 4. Open `powerbi/Superstore_Executive.pbip` in Power BI Desktop. Keep its `.Report` and `.SemanticModel` folders together with the `.pbip` file.
 5. Configure database credentials if prompted, refresh the report, and run [Validation.dax](./powerbi/Validation.dax) in DAX query view.
+6. Run the updated SQL analyses from the repository root (see [README-SQL.md](./README-SQL.md)):
+
+```powershell
+psql -X -v ON_ERROR_STOP=1 -h localhost -p 5432 -U postgres -d superstore_data -W -f ".\SQL\superstore_flat_analysis.sql"
+psql -X -v ON_ERROR_STOP=1 -h localhost -p 5432 -U postgres -d superstore_data -W -f ".\SQL\superstore_relational_analysis.sql"
+```
 
 See [README-PowerBI.md](./README-PowerBI.md) for alternate connection settings and detailed instructions. No database credentials are included in the project.
 
