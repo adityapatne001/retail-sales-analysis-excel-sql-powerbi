@@ -1,0 +1,15 @@
+# Power BI Desktop local state and cache
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+**/.pbi/unappliedChanges.json
+
+# Local credentials and environment files
+.env
+.env.*
+!.env.example
+*.pgpass
+
+# Temporary Office files and OS metadata
+~$*
+Thumbs.db
+.DS_Store
